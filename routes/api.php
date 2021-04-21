@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SharesController;
 use App\Http\Controllers\RegisterController;
@@ -21,7 +20,7 @@ use App\Http\Controllers\CommentController;
 |
 */
 
-Route::apiResource('/share', SharesController::class);
+Route::apiResource('/shares', SharesController::class);
 Route::post('/register', [RegisterController::class, 'post']);
 Route::post('/login', [LoginController::class, 'post']);
 Route::post('/logout', [LogoutController::class, 'post']);

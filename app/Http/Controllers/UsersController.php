@@ -13,7 +13,7 @@ class UsersController extends Controller
             $items = DB::table('users')->where('email', $request->email)->get();
             return response()->json([
                 'message' => 'User got successfully',
-                'data' => $items,
+                'data' => $items
             ], 200);
         }else{
             return response()->json(['status' => 'not found'], 404);
